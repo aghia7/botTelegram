@@ -150,10 +150,10 @@ public class TestAITUBot extends TelegramLongPollingBot {
 //
 
     public String getBotUsername() {
-        return "aghia7bot";
+        return System.getenv("username");
     }
 
     public String getBotToken() {
-        return "1192545406:AAFGz89vt10kKuNtfDxbeiTsfEkT2CPV_b8";
+        return System.getenv("token");
     }
 }
