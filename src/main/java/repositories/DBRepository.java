@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class DBRepository implements IDBRepository {
     @Override
     public Connection getConnection() throws SQLException {
-        String connStr = "jdbc:postgresql://localhost:5432/botDB";
-        return DriverManager.getConnection(connStr, "postgres", "0000");
+        String connStr = "ec2-34-202-88-122.compute-1.amazonaws.com/deilolkg1haoba";
+        return DriverManager.getConnection(connStr, "xlwunupaccsujy", "0125c7e91b51e0a005d66536fc8bfb553c102ad1e2167e752764f59f6e3635d4");
     }
 }

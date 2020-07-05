@@ -21,8 +21,8 @@ import java.util.List;
 
 public class BotService implements IBotService {
 
-    private static final String BASEURLQUESTIONS = "http://localhost:9966/api/v1/questions/";
-    private static final String BASEURLCATEGORIES = "http://localhost:9966/api/v1/categories/";
+    private static final String BASEURLQUESTIONS = "https://astanaitbotapi.herokuapp.com/api/v1/questions/";
+    private static final String BASEURLCATEGORIES = "https://astanaitbotapi.herokuapp.com/api/v1/categories/";
     private static volatile BotService instance;
 
     private BotService(){
