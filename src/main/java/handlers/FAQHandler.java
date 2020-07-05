@@ -86,9 +86,15 @@ public class FAQHandler {
             if (language == Language.RUS) {
                 String answer = EmojiParser.parseToUnicode(":house: Вернуться в меню");
                 row.add(answer);
+                keyboard.add(row);
+                row = new KeyboardRow();
+                row.add("Поменять язык");
             } else if (language == Language.KAZ) {
                 String answer = EmojiParser.parseToUnicode(":house: Басты мәзір");
                 row.add(answer);
+                keyboard.add(row);
+                row = new KeyboardRow();
+                row.add("Тілді ауыстыру");
             }
             keyboard.add(row);
             keyboardMarkup.setKeyboard(keyboard);
@@ -120,14 +126,25 @@ public class FAQHandler {
 
             if (questions.isEmpty() && categories.isEmpty()) {
                 message.setText(handleQuestion(update, userData));
-                return message;
+                row.add(MainMenuButton(language));
+                keyboard.add(row);
             } else {
                 row.add(MainMenuButton(language));
                 keyboard.add(row);
-                keyboardMarkup.setKeyboard(keyboard);
-                message.setReplyMarkup(keyboardMarkup);
-                return message;
             }
+
+            if (language == Language.RUS) {
+                row = new KeyboardRow();
+                row.add("Поменять язык");
+            } else {
+                row = new KeyboardRow();
+                row.add("Тілді ауыстыру");
+            }
+
+            keyboard.add(row);
+            keyboardMarkup.setKeyboard(keyboard);
+            message.setReplyMarkup(keyboardMarkup);
+            return message;
         }
 
     }

@@ -41,7 +41,10 @@ public class TestAITUBot extends TelegramLongPollingBot {
         }
 
         String message_text = update.getMessage().getText();
-        if (message_text.equals("/start")) {
+        if (message_text.equals("/start")
+                || message_text.equals("Поменять язык")
+                || message_text.equals("Тілді ауыстыру")
+        ) {
 
             message_text = "Astana IT University \n\n Приветствую Вас, абитуриент! " +
                     "Выберите язык для продолжения...\n\n Қош келдіңіз, құрметті " +
