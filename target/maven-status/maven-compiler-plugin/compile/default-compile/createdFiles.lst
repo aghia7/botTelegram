@@ -1,0 +1,13 @@
+TestAITUBot.class
+services\UserService.class
+models\User.class
+handlers\FAQHandler.class
+repositories\DBRepository.class
+Main.class
+repositories\interfaces\IUserRepository.class
+repositories\interfaces\IDBRepository.class
+handlers\Language.class
+services\interfaces\IUserService.class
+services\interfaces\IBotService.class
+repositories\UserRepository.class
+services\BotService.class
